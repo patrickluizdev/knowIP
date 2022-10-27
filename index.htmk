@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowIP</title>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+</head>
+<body>
+        <script type="application/javascript">
+            $(function() {
+              $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+                function(json) {
+                    document.write("<h1>Seu IP é: ", json.ip, "</h1>");
+                }
+              );
+            });
+        </script>
+  
+    
+</body>
+
+</html>
